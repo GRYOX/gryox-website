@@ -1,26 +1,284 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Dark is the primary experience; light is opt-in and persisted. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
+@custom-variant hover-fine (@media (hover: hover) and (pointer: fine));
+
+/* ---------------------------------------------------------------------------
+   Tokens
+   Brand colours sampled from the official logo: green #00CC69, purple #7922ED.
+   *-ink variants are tuned for AA text contrast on each background.
+--------------------------------------------------------------------------- */
+:root,
+[data-theme="dark"] {
+  --bg: #050506;
+  --bg-elev: #0d0d10;
+  --fg: #f3f3f0;
+  --fg-muted: rgb(243 243 240 / 0.64);
+  --fg-faint: rgb(243 243 240 / 0.4);
+  --line: rgb(243 243 240 / 0.12);
+  --line-strong: rgb(243 243 240 / 0.28);
+  --green: #00cc69;
+  --purple: #7922ed;
+  --green-ink: #1fe389;
+  --purple-ink: #ad82ff;
+  --selection: rgb(0 204 105 / 0.35);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #f3f3f0;
+  --bg-elev: #e8e8e3;
+  --fg: #0a0a0b;
+  --fg-muted: rgb(10 10 11 / 0.66);
+  --fg-faint: rgb(10 10 11 / 0.45);
+  --line: rgb(10 10 11 / 0.12);
+  --line-strong: rgb(10 10 11 / 0.3);
+  --green: #00cc69;
+  --purple: #7922ed;
+  --green-ink: #007a43;
+  --purple-ink: #6516d6;
+  --selection: rgb(121 34 237 / 0.22);
+  color-scheme: light;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-elev: var(--bg-elev);
+  --color-fg: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-faint: var(--fg-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-green: var(--green);
+  --color-purple: var(--purple);
+  --color-green-ink: var(--green-ink);
+  --color-purple-ink: var(--purple-ink);
+
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --breakpoint-xs: 26rem;
+  --text-micro: 0.6875rem;
+  --text-micro--line-height: 1.2;
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+--------------------------------------------------------------------------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    background: var(--bg);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--selection);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  [data-theme="light"] :focus-visible {
+    outline-color: var(--purple);
+  }
+
+  button,
+  [role="button"],
+  label[for] {
+    cursor: pointer;
+  }
+
+  img,
+  canvas {
+    display: block;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Theme switch: colours only, briefly, so nothing jumps. */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition:
+    background-color 360ms var(--ease-out-expo),
+    color 360ms var(--ease-out-expo),
+    border-color 360ms var(--ease-out-expo),
+    fill 360ms var(--ease-out-expo) !important;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Custom cursor: native cursor stays on text inputs. */
+@media (hover: hover) and (pointer: fine) {
+  html.has-cursor,
+  html.has-cursor a,
+  html.has-cursor button,
+  html.has-cursor [role="button"],
+  html.has-cursor label {
+    cursor: none;
+  }
+  html.has-cursor input,
+  html.has-cursor textarea,
+  html.has-cursor select {
+    cursor: text;
+  }
+}
+
+/* While the opening plays, page content waits underneath (with a failsafe reveal). */
+@keyframes gx-failsafe {
+  to {
+    opacity: 1;
+  }
+}
+html.is-opening [data-reveal-after-opening] {
+  opacity: 0;
+  animation: gx-failsafe 0.6s 6s forwards;
+}
+
+/* ---------------------------------------------------------------------------
+   Utilities — GRYOX shape language
+   The chamfer echoes the cut corners of the G; the diagonal echoes the cut
+   between G and R.
+--------------------------------------------------------------------------- */
+@utility gutter {
+  padding-inline: clamp(1rem, 4vw, 3.5rem);
+}
+
+@utility chamfer {
+  --c: 14px;
+  clip-path: polygon(var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%, 0 var(--c));
+}
+
+@utility chamfer-sm {
+  --c: 7px;
+  clip-path: polygon(var(--c) 0, 100% 0, 100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 0 100%, 0 var(--c));
+}
+
+/* Bordered chamfer: the frame colour is the element's background (clipped), the fill is an
+   inset pseudo-element with a matching cut — so the 1px border follows the diagonal. */
+@utility chamfer-frame {
+  position: relative;
+  isolation: isolate;
+  background: var(--frame, var(--line));
+  clip-path: polygon(
+    var(--c, 12px) 0,
+    100% 0,
+    100% calc(100% - var(--c, 12px)),
+    calc(100% - var(--c, 12px)) 100%,
+    0 100%,
+    0 var(--c, 12px)
+  );
+  transition: background-color 300ms;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    background: var(--fill, var(--bg-elev));
+    transition: background-color 300ms;
+    clip-path: polygon(
+      calc(var(--c, 12px) - 0.41px) 0,
+      100% 0,
+      100% calc(100% - var(--c, 12px) + 0.41px),
+      calc(100% - var(--c, 12px) + 0.41px) 100%,
+      0 100%,
+      0 calc(var(--c, 12px) - 0.41px)
+    );
+  }
+}
+
+@utility display-wide {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-variation-settings: "wdth" 125;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+}
+
+@utility display-tight {
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  font-variation-settings: "wdth" 112;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+@utility hud {
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@utility text-idea {
+  color: var(--green-ink);
+}
+
+@utility text-tech {
+  color: var(--purple-ink);
+}
+
+@utility hairline {
+  border-color: var(--line);
+}
+
+@keyframes gx-scroll {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(300%);
+  }
+}
+
+/* Split text lines/chars (GSAP SplitText) */
+.split-line {
+  display: block;
+  overflow: clip;
+  padding-bottom: 0.06em;
+  margin-bottom: -0.06em;
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion
+--------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }

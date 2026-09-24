@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "GRYOX — Transformamos ideias em tecnologia",
+    "description": "GRYOX desenvolve software sob medida, websites, aplicações web, aplicativos móveis, automação e soluções com inteligência artificial.",
+    "ogAlt": "GRYOX — Transformamos ideias em tecnologia",
+    "notFoundTitle": "Página não encontrada"
+  },
+  "a11y": {
+    "skip": "Pular para o conteúdo",
+    "mainNav": "Navegação principal",
+    "home": "GRYOX — início",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "toLight": "Ativar modo claro",
+    "toDark": "Ativar modo escuro",
+    "language": "Idioma",
+    "switchTo": "Mudar para {language}",
+    "skipIntro": "Pular introdução",
+    "placeholder": "Conteúdo provisório",
+    "chapterProgress": "Progresso dos capítulos"
+  },
+  "nav": {
+    "work": "Trabalho",
+    "lab": "Lab",
+    "about": "Sobre",
+    "contact": "Contato",
+    "menu": "Menu",
+    "close": "Fechar",
+    "startProject": "Iniciar um projeto"
+  },
+  "cursor": {
+    "view": "Ver",
+    "open": "Abrir",
+    "play": "Interagir",
+    "select": "Escolher",
+    "send": "Enviar"
+  },
+  "opening": {
+    "tagline": "Transformamos ideias em tecnologia.",
+    "skip": "Pular"
+  },
+  "hero": {
+    "eyebrow": "Matéria digital",
+    "title": "Transformamos <idea>ideias</idea> em <tech>tecnologia.</tech>",
+    "lede": "Software sob medida, websites, aplicativos, inteligência artificial e automação — projetados e construídos pela GRYOX.",
+    "cta": "Iniciar um projeto",
+    "scroll": "Role para explorar",
+    "hudForming": "Ideia → tecnologia",
+    "interactPointer": "Mova o cursor sobre a matéria",
+    "interactTouch": "Toque e arraste sobre a matéria"
+  },
+  "manifesto": {
+    "label": "Manifesto",
+    "lines": ["UMA IDEIA.", "UMA POSSIBILIDADE.", "UMA EXPERIÊNCIA.", "UMA SOLUÇÃO.", "GRYOX."],
+    "coda": "Toda tecnologia começa como uma ideia. O nosso trabalho é dar forma a ela."
+  },
+  "capabilities": {
+    "label": "Capacidades",
+    "title": "Da matéria à forma.",
+    "intro": "Cinco maneiras de transformar uma ideia em tecnologia que funciona.",
+    "chapter": "Capítulo",
+    "items": {
+      "software": {
+        "title": "Software",
+        "transform": "A matéria se torna interface.",
+        "statement": "Sistemas sob medida, desenhados em torno de como o seu negócio realmente opera.",
+        "list": ["Sistemas internos e painéis", "Plataformas e SaaS", "Integrações e APIs"]
+      },
+      "web": {
+        "title": "Websites",
+        "transform": "A interface se expande em um ambiente.",
+        "statement": "Sites e aplicações web rápidos, acessíveis e memoráveis.",
+        "list": ["Sites institucionais e experiências imersivas", "Aplicações web", "Performance, SEO e acessibilidade"]
+      },
+      "apps": {
+        "title": "Apps",
+        "transform": "O ambiente se condensa em um dispositivo.",
+        "statement": "Aplicativos pensados para o toque, para o contexto e para o dia a dia.",
+        "list": ["iOS e Android", "Produtos digitais", "Protótipos e MVPs"]
+      },
+      "ai": {
+        "title": "IA",
+        "transform": "O dispositivo se transforma em uma rede.",
+        "statement": "Inteligência artificial aplicada a problemas reais e integrada aos seus sistemas.",
+        "list": ["Assistentes e agentes", "Processamento de documentos e dados", "Integração com modelos de linguagem"]
+      },
+      "automation": {
+        "title": "Automação",
+        "transform": "A rede se torna sistemas conectados.",
+        "statement": "Processos que funcionam sozinhos, para que as pessoas foquem no que importa.",
+        "list": ["Fluxos de trabalho automatizados", "Integração entre ferramentas", "Rotinas e relatórios"]
+      }
+    }
+  },
+  "work": {
+    "label": "Trabalhos selecionados",
+    "title": "Trabalho",
+    "intro": "Projetos que saíram da ideia e viraram tecnologia.",
+    "view": "Ver projeto",
+    "placeholderNote": "Espaço reservado — estudo de caso real em breve.",
+    "category": "Categoria",
+    "year": "Ano",
+    "stack": "Tecnologias",
+    "overview": "Visão geral",
+    "back": "Voltar aos trabalhos",
+    "next": "Próximo projeto",
+    "live": "Você está nele"
+  },
+  "lab": {
+    "label": "GRYOX LAB",
+    "title": "Nós experimentamos.",
+    "intro": "Um espaço para testar ideias antes que elas tenham nome. Tudo aqui roda ao vivo, no seu navegador.",
+    "areasLabel": "Áreas de exploração",
+    "areas": ["WebGL", "3D", "IA", "Automação", "Creative coding", "Interfaces generativas", "Software experimental"],
+    "experiments": {
+      "flow": {
+        "title": "Campo de fluxo",
+        "desc": "Partículas seguindo um campo de ruído. Passe o cursor ou o dedo para perturbar o fluxo."
+      },
+      "interface": {
+        "title": "Interface generativa",
+        "desc": "Layouts gerados por regras simples. Cada clique gera uma nova composição.",
+        "action": "Gerar outra"
+      },
+      "signal": {
+        "title": "Rede de sinais",
+        "desc": "Digite. Cada letra vira um nó e se conecta aos vizinhos.",
+        "input": "Digite uma ideia"
+      },
+      "pipeline": {
+        "title": "Pipeline",
+        "desc": "Um fluxo automatizado em miniatura. Dispare um evento e acompanhe o sinal.",
+        "action": "Disparar evento",
+        "steps": ["Entrada", "Validação", "IA", "Integração", "Entrega"]
+      }
+    }
+  },
+  "founders": {
+    "label": "Quem constrói",
+    "title": "Feita por pessoas.",
+    "intro": "A GRYOX foi fundada por Rafael e Gabriel. Não é uma marca sem rosto: são duas pessoas projetando, escrevendo código e respondendo pelo que entregam.",
+    "role": "Cofundador",
+    "bioPlaceholder": "Bio a ser escrita pelo próprio fundador.",
+    "photoPlaceholder": "Foto em breve"
+  },
+  "contact": {
+    "label": "Contato",
+    "title": "O que você está construindo?",
+    "intro": "Conte o essencial. O resto a gente descobre junto.",
+    "stepType": "Tipo de projeto",
+    "stepDetails": "Detalhes",
+    "types": {
+      "website": "Website",
+      "software": "Software",
+      "app": "App",
+      "ai": "IA",
+      "automation": "Automação",
+      "unsure": "Ainda não sei"
+    },
+    "fields": {
+      "name": "Nome",
+      "company": "Empresa",
+      "companyHint": "opcional",
+      "contact": "E-mail ou WhatsApp",
+      "message": "Sobre o projeto",
+      "messagePlaceholder": "O que você quer construir, para quem e por quê."
+    },
+    "submit": "Vamos construir.",
+    "sending": "Enviando…",
+    "successTitle": "Recebido.",
+    "successBody": "Sua mensagem chegou até nós. Vamos responder em breve.",
+    "again": "Enviar outra mensagem",
+    "errors": {
+      "type": "Escolha um tipo de projeto.",
+      "name": "Informe seu nome.",
+      "contact": "Informe um e-mail ou telefone para contato.",
+      "message": "Conte um pouco mais sobre o projeto (mínimo de 10 caracteres).",
+      "unconfigured": "O envio de mensagens ainda não foi configurado neste ambiente.",
+      "failed": "Não foi possível enviar agora. Tente novamente em instantes."
+    }
+  },
+  "footer": {
+    "tagline": "Transformamos ideias em tecnologia.",
+    "rights": "Todos os direitos reservados.",
+    "top": "Voltar ao topo",
+    "built": "Construído pela GRYOX com Next.js, WebGL e GSAP."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Esta rota ainda não virou tecnologia.",
+    "back": "Voltar ao início"
+  }
+}

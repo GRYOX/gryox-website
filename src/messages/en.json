@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "GRYOX — We turn ideas into technology",
+    "description": "GRYOX builds custom software, websites, web applications, mobile apps, automation and artificial intelligence solutions.",
+    "ogAlt": "GRYOX — We turn ideas into technology",
+    "notFoundTitle": "Page not found"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "mainNav": "Main navigation",
+    "home": "GRYOX — home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode",
+    "language": "Language",
+    "switchTo": "Switch to {language}",
+    "skipIntro": "Skip intro",
+    "placeholder": "Placeholder content",
+    "chapterProgress": "Chapter progress"
+  },
+  "nav": {
+    "work": "Work",
+    "lab": "Lab",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "startProject": "Start a project"
+  },
+  "cursor": {
+    "view": "View",
+    "open": "Open",
+    "play": "Play",
+    "select": "Select",
+    "send": "Send"
+  },
+  "opening": {
+    "tagline": "We turn ideas into technology.",
+    "skip": "Skip"
+  },
+  "hero": {
+    "eyebrow": "Digital matter",
+    "title": "We turn <idea>ideas</idea> into <tech>technology.</tech>",
+    "lede": "Custom software, websites, apps, artificial intelligence and automation — designed and engineered by GRYOX.",
+    "cta": "Start a project",
+    "scroll": "Scroll to explore",
+    "hudForming": "Idea → technology",
+    "interactPointer": "Move your cursor over the matter",
+    "interactTouch": "Touch and drag over the matter"
+  },
+  "manifesto": {
+    "label": "Manifesto",
+    "lines": ["AN IDEA.", "A POSSIBILITY.", "AN EXPERIENCE.", "A SOLUTION.", "GRYOX."],
+    "coda": "Every piece of technology starts as an idea. Our work is giving it form."
+  },
+  "capabilities": {
+    "label": "Capabilities",
+    "title": "From matter to form.",
+    "intro": "Five ways we turn an idea into technology that works.",
+    "chapter": "Chapter",
+    "items": {
+      "software": {
+        "title": "Software",
+        "transform": "Matter becomes interface.",
+        "statement": "Custom systems, designed around how your business actually operates.",
+        "list": ["Internal systems and dashboards", "Platforms and SaaS", "Integrations and APIs"]
+      },
+      "web": {
+        "title": "Websites",
+        "transform": "The interface expands into an environment.",
+        "statement": "Fast, accessible and memorable websites and web applications.",
+        "list": ["Company sites and immersive experiences", "Web applications", "Performance, SEO and accessibility"]
+      },
+      "apps": {
+        "title": "Apps",
+        "transform": "The environment condenses into a device.",
+        "statement": "Mobile apps designed for touch, for context and for everyday use.",
+        "list": ["iOS and Android", "Digital products", "Prototypes and MVPs"]
+      },
+      "ai": {
+        "title": "AI",
+        "transform": "The device becomes a network.",
+        "statement": "Artificial intelligence applied to real problems and integrated into your systems.",
+        "list": ["Assistants and agents", "Document and data processing", "Language model integration"]
+      },
+      "automation": {
+        "title": "Automation",
+        "transform": "The network becomes connected systems.",
+        "statement": "Processes that run on their own, so people can focus on what matters.",
+        "list": ["Automated workflows", "Tool-to-tool integration", "Routines and reporting"]
+      }
+    }
+  },
+  "work": {
+    "label": "Selected work",
+    "title": "Work",
+    "intro": "Projects that left the idea stage and became technology.",
+    "view": "View project",
+    "placeholderNote": "Placeholder — real case study coming soon.",
+    "category": "Category",
+    "year": "Year",
+    "stack": "Stack",
+    "overview": "Overview",
+    "back": "Back to work",
+    "next": "Next project",
+    "live": "You are here"
+  },
+  "lab": {
+    "label": "GRYOX LAB",
+    "title": "We experiment.",
+    "intro": "A space for testing ideas before they have a name. Everything here runs live, in your browser.",
+    "areasLabel": "Areas of exploration",
+    "areas": ["WebGL", "3D", "AI", "Automation", "Creative coding", "Generative interfaces", "Experimental software"],
+    "experiments": {
+      "flow": {
+        "title": "Flow field",
+        "desc": "Particles following a noise field. Move your cursor or finger across it to disturb the flow."
+      },
+      "interface": {
+        "title": "Generative interface",
+        "desc": "Layouts generated from simple rules. Every click composes a new one.",
+        "action": "Generate another"
+      },
+      "signal": {
+        "title": "Signal network",
+        "desc": "Type. Every letter becomes a node and connects to its neighbours.",
+        "input": "Type an idea"
+      },
+      "pipeline": {
+        "title": "Pipeline",
+        "desc": "An automated flow in miniature. Trigger an event and follow the signal.",
+        "action": "Trigger event",
+        "steps": ["Input", "Validation", "AI", "Integration", "Delivery"]
+      }
+    }
+  },
+  "founders": {
+    "label": "Who builds",
+    "title": "Built by people.",
+    "intro": "GRYOX was founded by Rafael and Gabriel. Not a faceless brand: two people designing, writing code and answering for what they ship.",
+    "role": "Co-founder",
+    "bioPlaceholder": "Bio to be written by the founder.",
+    "photoPlaceholder": "Photo coming soon"
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "What are you building?",
+    "intro": "Tell us the essentials. We'll figure out the rest together.",
+    "stepType": "Project type",
+    "stepDetails": "Details",
+    "types": {
+      "website": "Website",
+      "software": "Software",
+      "app": "App",
+      "ai": "AI",
+      "automation": "Automation",
+      "unsure": "Not sure yet"
+    },
+    "fields": {
+      "name": "Name",
+      "company": "Company",
+      "companyHint": "optional",
+      "contact": "Email or WhatsApp",
+      "message": "About the project",
+      "messagePlaceholder": "What you want to build, for whom, and why."
+    },
+    "submit": "Let's build it.",
+    "sending": "Sending…",
+    "successTitle": "Received.",
+    "successBody": "Your message reached us. We'll get back to you soon.",
+    "again": "Send another message",
+    "errors": {
+      "type": "Choose a project type.",
+      "name": "Please enter your name.",
+      "contact": "Please enter an email or phone number.",
+      "message": "Tell us a little more about the project (at least 10 characters).",
+      "unconfigured": "Message delivery hasn't been configured in this environment yet.",
+      "failed": "We couldn't send it right now. Please try again in a moment."
+    }
+  },
+  "footer": {
+    "tagline": "We turn ideas into technology.",
+    "rights": "All rights reserved.",
+    "top": "Back to top",
+    "built": "Built by GRYOX with Next.js, WebGL and GSAP."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "This route hasn't become technology yet.",
+    "back": "Back to home"
+  }
+}
